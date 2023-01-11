@@ -1,11 +1,15 @@
 <template>
   <main>
-    <div class="bg-green-300">
+    <TheHeader />
+    <div
+      class="bg-green-300"
+    >
       hello there
     </div>
     <div class="text-primary">
       {{ isDark }}
     </div>
+    <TheFooter />
   </main>
 </template>
 
