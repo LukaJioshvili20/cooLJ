@@ -4,7 +4,15 @@
       hello there
     </div>
     <div class="text-primary">
-      hello there
+      {{ isDark }}
     </div>
   </main>
 </template>
+
+<script lang="ts" setup>
+import { appStore } from '@/stores/app'
+const store = appStore()
+const isDark = computed(function (): boolean {
+  return store.darkMode
+})
+</script>
