@@ -1,5 +1,11 @@
 {
+  "name":"coolj",
+  "version": "1.0.0",
   "private": true,
+  "license": "MIT",
+  "publisher": "LukaJioshvili20",
+  "email": "luka.jioshvili20@gmail.com",
+  "description": "Luka Jioshvili's portfolio website",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
