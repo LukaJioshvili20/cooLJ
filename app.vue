@@ -1,6 +1,8 @@
 <template>
   <main>
     <TheHeader />
+    <NuxtPage />
+    <h1>Below</h1>
     <div
       class="bg-green-300"
     >
