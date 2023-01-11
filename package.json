@@ -1,5 +1,5 @@
 {
-  "name":"coolj",
+  "name": "coolj",
   "version": "1.0.0",
   "private": true,
   "license": "MIT",
@@ -11,13 +11,20 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --ext \".ts,.js,.vue\" --ignore-path .gitignore ."
   },
   "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/tailwindcss": "^6.2.0",
     "autoprefixer": "^10.4.13",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "nuxt": "3.0.0",
-    "postcss": "^8.4.21"
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.2"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.6",
