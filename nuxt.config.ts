@@ -9,5 +9,6 @@ export default defineNuxtConfig({
   },
   typescript: {
     strict: true
-  }
+  },
+  pages: true
 })
