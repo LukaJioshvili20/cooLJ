@@ -16,3 +16,10 @@
     </nav>
   </header>
 </template>
+
+
+<style lang="scss" scoped>
+header{
+  color: red;
+}
+</style>
