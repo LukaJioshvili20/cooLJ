@@ -1,5 +1,5 @@
 <template>
-  <div class="font-inter min-h-screen flex flex-col">
+  <div class="font-main min-h-screen flex flex-col">
     <NuxtLayout name="default" />
   </div>
 </template>
