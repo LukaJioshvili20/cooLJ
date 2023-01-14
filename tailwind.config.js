@@ -10,8 +10,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        inter: "'Inter', serif",
-        interItalic: "'Inter Italic', serif",
+        main: "'Inter','M Plus' ,serif",
+        mainItalic: "'Inter Italic', 'M Plus Italic' ,serif",
+      },
+      colors:{
+        "grey-passive": "#A1A1AA",
       }
     }
   },
