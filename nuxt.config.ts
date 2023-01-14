@@ -7,6 +7,11 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined',
           rel: 'stylesheet',
         },
+        {
+          href: '/J-32.svg',
+          rel: 'icon',
+          type: 'image/x-icon'
+        }
       ],
     }
   },
