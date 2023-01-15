@@ -34,8 +34,8 @@
         </nav>
       </div>
       <div>
-        <ul class="h-full flex flex-row">
-          <li class="flex flex-col justify-center">
+        <ul class="h-full flex flex-row items-center">
+          <li>
             <a
               href="https://www.linkedin.com/in/luka-jioshvili/"
               target="_blank"
@@ -45,14 +45,14 @@
               ></i>
             </a>
           </li>
-          <li class="flex flex-col justify-center">
+          <li>
             <a href="https://github.com/LukaJioshvili20" target="_blank">
               <i
                 class="mdi mdi-github mdi-24px mr-2 transition-colors text-zinc-400 hover:text-gray-200"
               ></i>
             </a>
           </li>
-          <li class="flex flex-col justify-center">
+          <li>
             <ButtonDarkMode />
           </li>
         </ul>
@@ -91,8 +91,8 @@
                 @click.left="toggleMobileNavigation"
                 class="cursor-pointer mdi mdi-close mdi-24px transition-colors text-zinc-400 hover:text-gray-200"
               ></i>
-              <ul class="h-full flex flex-row">
-                <li class="flex flex-col justify-center">
+              <ul class="h-full flex flex-row items-center">
+                <li>
                   <a
                     href="https://www.linkedin.com/in/luka-jioshvili/"
                     target="_blank"
@@ -102,14 +102,14 @@
                     ></i>
                   </a>
                 </li>
-                <li class="flex flex-col justify-center">
+                <li>
                   <a href="https://github.com/LukaJioshvili20" target="_blank">
                     <i
                       class="mdi mdi-github mdi-24px mr-2 transition-colors text-zinc-400 hover:text-gray-200"
                     ></i>
                   </a>
                 </li>
-                <li class="flex flex-col justify-center">
+                <li>
                   <ButtonDarkMode />
                 </li>
               </ul>
@@ -153,9 +153,12 @@
 
 <style lang="scss" scoped>
   header {
-    background-color: #0c0c0df2;
+    background-color: #0c0c0db9;
     max-height: 64px;
     height: 64px;
+    z-index: 2;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
   }
 
   @media screen and (max-width: 840px) {
