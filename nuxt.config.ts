@@ -8,6 +8,10 @@ export default defineNuxtConfig({
           rel: 'stylesheet',
         },
         {
+          href: '/apple-touch-icon.png',
+          rel: 'apple-touch-icon',
+        },
+        {
           href: '/J-32.svg',
           rel: 'icon',
           type: 'image/x-icon'
