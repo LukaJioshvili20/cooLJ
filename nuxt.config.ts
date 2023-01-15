@@ -24,6 +24,9 @@ export default defineNuxtConfig({
     }
   },
   modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
+  plugins: [
+    { src: '~/plugins/three.js', mode: 'client' }
+  ],
   postcss: {
     plugins: {
       tailwindcss: {},
