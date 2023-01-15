@@ -29,8 +29,8 @@ export const appStore = defineStore('app', {
     }
   },
   actions: {
-    [AppActions.themeToggleAction] (payload: boolean = false):void {
-      this.darkMode = payload
+    [AppActions.themeToggleAction] ():void {
+      this.darkMode = !this.darkMode
     },
     [AppActions.toggleNavigationAction] (): void{
       this.isNavigationOpened = !this.isNavigationOpened
