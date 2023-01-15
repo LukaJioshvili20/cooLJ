@@ -1,24 +1,42 @@
 import { defineStore } from 'pinia'
 
 interface AppState {
-    darkMode: boolean,
+  isMobile: boolean,
+  isNavigationOpened: boolean,
+  darkMode: boolean,
 }
 export enum AppActions {
   themeToggleAction = 'themeToggleAction',
+  toggleNavigationAction = 'toggleNavigationAction',
+  isMobileAction = 'isMobileAction',
 }
 
 export const appStore = defineStore('app', {
   state: (): AppState => ({
-    darkMode: false
+    isMobile: false,
+    isNavigationOpened:false,
+    darkMode: false,
   }),
   getters: {
-    darkModeGetter: (state) => {
+    darkModeGetter: (state):boolean=> {
       return state.darkMode
+    },
+    isNavigationOpenedGetter: (state):boolean=> {
+      return state.isNavigationOpened
+    },
+    isMobileGetter: (state):boolean => {
+      return state.isMobile
     }
   },
   actions: {
-    [AppActions.themeToggleAction] (payload = false) {
+    [AppActions.themeToggleAction] (payload: boolean = false):void {
       this.darkMode = payload
-    }
+    },
+    [AppActions.toggleNavigationAction] (): void{
+      this.isNavigationOpened = !this.isNavigationOpened
+    },
+    [AppActions.isMobileAction] (payload: boolean): void{
+      this.isMobile = payload
+    },
   }
 })
