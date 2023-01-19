@@ -28,12 +28,12 @@
     "postcss": "^8.4.21",
     "prettier": "^2.8.2",
     "sass": "^1.57.1",
-    "sass-loader": "^13.2.0",
-    "three": "^0.148.0"
+    "sass-loader": "^13.2.0"
   },
   "dependencies": {
     "@mdi/font": "^7.1.96",
     "@pinia/nuxt": "^0.4.6",
-    "pinia": "^2.0.28"
+    "pinia": "^2.0.28",
+    "three": "^0.148.0"
   }
 }
