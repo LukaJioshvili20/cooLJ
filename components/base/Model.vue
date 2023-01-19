@@ -1,11 +1,17 @@
 <template>
-    <canvas ref="exeperiance"></canvas>
+  <canvas ref="exeperiance"></canvas>
 </template>
 
 <script setup lang="ts">
   import { useWindowSize } from "@vueuse/core";
   import { AmbientLight, PerspectiveCamera, Scene, WebGLRenderer } from "three";
   import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+  const props = defineProps({
+    modelPath: {
+      type: String,
+      default: null,
+    },
+  });
 
   // setup
   let renderer: WebGLRenderer;
@@ -26,7 +32,7 @@
   scene.add(ambientLight);
 
   const { load } = useGLTFModel();
-  const { scene: model }: any = await load("/models/nuxty/nuxty.gltf");
+  const { scene: model }: any = await load(props.modelPath);
 
   scene.add(model);
   function updateRenderer() {
