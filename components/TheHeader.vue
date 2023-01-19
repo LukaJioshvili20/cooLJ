@@ -78,15 +78,9 @@
         enter-active-class="animate__animated animate__slideInLeft"
         leave-active-class="animate__animated animate__slideOutLeft"
       >
-        <div
-          v-if="navigationOpened"
-          class="text-white fixed inset-0 z-50 flex items-start overflow-y-auto bg-opacity-50 dark:bg-opacity-50 lg:hidden"
-        >
-          <div
-            id="mobileNavigationBar"
-            class="bg-black min-h-full min-w-[320px] max-w-3/4 max-w-xs px-4 pb-12 shadow sm:px-6"
-          >
-            <div class="h-8 w-full my-2 flex flex-row justify-between">
+        <div v-if="navigationOpened" class="text-white fixed">
+          <div id="mobileNavigationBar" class="">
+            <div class="">
               <i
                 @click.left="toggleMobileNavigation"
                 class="cursor-pointer mdi mdi-close mdi-24px transition-colors text-zinc-400 hover:text-gray-200"

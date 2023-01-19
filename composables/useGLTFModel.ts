@@ -1,7 +1,7 @@
- // add gltf model
-  import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+// add gltf model
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
- export function useGLTFModel(){
+export function useGLTFModel(){
     const gltfLoader = new GLTFLoader();
     function load (url: string): unknown{
         return new Promise((resolve, reject)=>{
@@ -11,4 +11,4 @@
     return {
         load
     }
- }
+}
