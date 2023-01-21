@@ -1,6 +1,6 @@
 <template>
   <i
-    @click.left="toggleDarkTheme"
+    @click.left="toggleTheme"
     class="cursor-pointer mdi mdi-24px transition-colors text-zinc-400 hover:text-gray-200"
     :class="isDarkTheme ? 'mdi-lightbulb-on' : 'mdi-lightbulb'"
   ></i>
@@ -10,7 +10,9 @@
   import { AppActions, appStore } from "@/stores/app";
   const store = appStore();
   const isDarkTheme = computed(() => store.darkModeGetter);
-  function toggleDarkTheme() {
+  function toggleTheme() {
+    console.log("ckicked");
+
     store[AppActions.themeToggleAction]();
   }
 </script>
