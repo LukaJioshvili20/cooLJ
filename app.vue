@@ -6,6 +6,7 @@
 
 <script lang="ts" setup>
   import { AppActions, appStore } from "@/stores/app";
+
   const store = appStore();
   const windowWidth = ref(0);
 
@@ -24,5 +25,7 @@
   onBeforeMount(() => {
     currentWindowWidth();
     window.addEventListener("resize", currentWindowWidth);
+
+    store[AppActions.themeToggleAction](initializeThemePreferance());
   });
 </script>
