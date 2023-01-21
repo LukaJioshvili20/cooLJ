@@ -8,7 +8,9 @@
         <NuxtLink to="/">
           <span class="flex flex-row items-center">
             <img src="/J-32.svg" width="20" height="20" alt="J" class="mr-2" />
-            <p class="font-semibold text-white">Luka Jioshvili</p>
+            <p class="font-semibold text-white dark:text-red-400">
+              Luka Jioshvili
+            </p>
           </span>
         </NuxtLink>
       </div>
@@ -73,60 +75,66 @@
         </span>
       </NuxtLink>
 
-      <transition
-        name="custom-classes"
-        enter-active-class="animate__animated animate__slideInLeft"
-        leave-active-class="animate__animated animate__slideOutLeft"
+      <ButtonDarkMode />
+    </div>
+    <transition
+      name="custom-classes"
+      enter-active-class="animate__animated animate__slideInLeft"
+      leave-active-class="animate__animated animate__slideOutLeft"
+    >
+      <div
+        v-if="navigationOpened"
+        class="text-white min-h-screen absolute inset-0 z-50 flex items-start overflow-y-auto bg-opacity-50 dark:bg-opacity-50 lg:hidden"
       >
-        <div v-if="navigationOpened" class="text-white fixed">
-          <div id="mobileNavigationBar" class="">
-            <div class="">
-              <i
-                @click.left="toggleMobileNavigation"
-                class="cursor-pointer mdi mdi-close mdi-24px transition-colors text-zinc-400 hover:text-gray-200"
-              ></i>
-              <ul class="h-full flex flex-row items-center">
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/luka-jioshvili/"
-                    target="_blank"
-                  >
-                    <i
-                      class="mdi mdi-linkedin mdi-24px mr-2 transition-colors text-zinc-400 hover:text-gray-200"
-                    ></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/LukaJioshvili20" target="_blank">
-                    <i
-                      class="mdi mdi-github mdi-24px mr-2 transition-colors text-zinc-400 hover:text-gray-200"
-                    ></i>
-                  </a>
-                </li>
-                <li>
-                  <ButtonDarkMode />
-                </li>
-              </ul>
-            </div>
-            <ul>
+        <div
+          id="mobileNavigationBar"
+          class="bg-black h-full min-w-[320px] max-w-3/4 max-w-xs px-4 pb-12 shadow sm:px-6"
+        >
+          <div class="h-8 w-full my-2 flex flex-row justify-between">
+            <i
+              @click.left="toggleMobileNavigation"
+              class="cursor-pointer mdi mdi-close mdi-24px transition-colors text-zinc-400 hover:text-gray-200"
+            ></i>
+            <ul class="h-full flex flex-row items-center">
               <li>
-                <NuxtLink to="/">Homepage</NuxtLink>
+                <a
+                  href="https://www.linkedin.com/in/luka-jioshvili/"
+                  target="_blank"
+                >
+                  <i
+                    class="mdi mdi-linkedin mdi-24px mr-2 transition-colors text-zinc-400 hover:text-gray-200"
+                  ></i>
+                </a>
               </li>
               <li>
-                <NuxtLink to="/docs">Docs</NuxtLink>
+                <a href="https://github.com/LukaJioshvili20" target="_blank">
+                  <i
+                    class="mdi mdi-github mdi-24px mr-2 transition-colors text-zinc-400 hover:text-gray-200"
+                  ></i>
+                </a>
               </li>
               <li>
-                <NuxtLink to="/roadmap">Roadmap</NuxtLink>
-              </li>
-              <li>
-                <NuxtLink to="/support">Support</NuxtLink>
+                <ButtonDarkMode />
               </li>
             </ul>
           </div>
+          <ul>
+            <li>
+              <NuxtLink to="/">Homepage</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/docs">Docs</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/roadmap">Roadmap</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/support">Support</NuxtLink>
+            </li>
+          </ul>
         </div>
-      </transition>
-      <ButtonDarkMode />
-    </div>
+      </div>
+    </transition>
   </header>
 </template>
 
