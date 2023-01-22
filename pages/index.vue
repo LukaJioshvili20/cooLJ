@@ -1,7 +1,8 @@
 <template>
-  <Fragment>
-    <HeroComponent />
-  </Fragment>
+  <main>
+    <HomeHeroComponent />
+    <HighLevelStacks />
+  </main>
 </template>
 
 <script lang="ts" setup>
