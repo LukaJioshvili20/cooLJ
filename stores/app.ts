@@ -44,7 +44,11 @@ export const appStore = defineStore("app", {
         document.documentElement.classList.remove("dark");
       }
     },
-    [AppActions.toggleNavigationAction](): void {
+    [AppActions.toggleNavigationAction](payload?: boolean): void {
+      if (typeof payload === "boolean") {
+        this.isNavigationOpened = payload;
+        return;
+      }
       this.isNavigationOpened = !this.isNavigationOpened;
     },
     [AppActions.isMobileAction](payload: boolean): void {
