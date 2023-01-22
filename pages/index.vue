@@ -14,6 +14,11 @@
         content: "Luka Jioshvili | Homepage",
       },
       {
+        hid: "og:title",
+        name: "og:title",
+        content: "Luka Jioshvili | Homepage",
+      },
+      {
         hid: "author",
         name: "author",
         content: "Luka Jioshvili",
@@ -27,6 +32,16 @@
         hid: "description",
         name: "description",
         content: "description for index page",
+      },
+      {
+        hid: "og:description",
+        name: "og:description",
+        content: "description for index page",
+      },
+      {
+        hid: "og:image",
+        name: "",
+        content: "",
       },
     ],
   });
