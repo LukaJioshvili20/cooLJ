@@ -65,7 +65,7 @@
       class="h-full container mx-auto flex-row justify-between items-center px-4"
     >
       <i
-        @click.left="toggleMobileNavigation"
+        @click.left="toggleMobileNavigation()"
         class="cursor-pointer mdi mdi-menu mdi-24px transition-colors text-zinc-400 hover:text-gray-200"
       ></i>
       <NuxtLink to="/">
@@ -92,7 +92,7 @@
         >
           <div class="h-8 w-full my-2 flex flex-row justify-between">
             <i
-              @click.left="toggleMobileNavigation"
+              @click.left="toggleMobileNavigation()"
               class="cursor-pointer mdi mdi-close mdi-24px transition-colors text-zinc-400 hover:text-gray-200"
             ></i>
             <ul class="h-full flex flex-row items-center">
@@ -143,13 +143,13 @@
   import { AppActions, appStore } from "@/stores/app";
   const store = appStore();
   const navigationOpened = computed(() => store.isNavigationOpenedGetter);
-  function toggleMobileNavigation() {
-    store[AppActions.toggleNavigationAction]();
+  function toggleMobileNavigation(payload?: boolean) {
+    store[AppActions.toggleNavigationAction](payload);
   }
   const routeState = useRoute();
 
-  watch(routeState, (oldValue, newValue) => {
-    toggleMobileNavigation();
+  watch(routeState, () => {
+    toggleMobileNavigation(false);
   });
 </script>
 
