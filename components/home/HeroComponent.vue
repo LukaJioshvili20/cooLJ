@@ -12,8 +12,15 @@
           Build and Deploy Universal JavaScript Servers
         </p>
         <div class="mt-10">
-          <BaseButton class="mr-2" :title="'Get Started'" :link="'/docs'" />
-          <a href="https://github.com/LukaJioshvili20" target="_blank"
+          <BaseButton
+            class="mr-2 font-medium"
+            :title="'Get Started'"
+            :link="'/docs'"
+          />
+          <a
+            class="transition-colors text-zinc-400 hover:text-zinc-200 font-medium"
+            href="https://github.com/LukaJioshvili20"
+            target="_blank"
             >Github Profile</a
           >
         </div>
