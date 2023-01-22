@@ -1,5 +1,7 @@
 <template>
-  <h1>Index page</h1>
+  <Fragment>
+    <HeroComponent />
+  </Fragment>
 </template>
 
 <script lang="ts" setup>
