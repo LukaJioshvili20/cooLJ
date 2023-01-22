@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed w-full">
+  <header class="fixed w-full z-50">
     <div
       id="desktopNavigation"
       class="h-full container mx-auto flex-row justify-between px-4"
@@ -158,7 +158,6 @@
     background-color: #0c0c0db9;
     max-height: 64px;
     height: 64px;
-    z-index: 2;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
