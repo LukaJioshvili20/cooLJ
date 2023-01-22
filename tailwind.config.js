@@ -16,7 +16,8 @@ module.exports = {
       },
       colors:{
         "grey-passive": "#A1A1AA",
-        "backgroundDark": "#202023"
+        "backgroundDark": "#0c0c0f",
+        "backgroundDark-2": "#27272a"
       }
     }
   },
