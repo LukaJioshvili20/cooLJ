@@ -19,7 +19,37 @@ export default defineNuxtConfig({
           href: '/J-32.svg',
           rel: 'icon',
           type: 'image/x-icon'
-        }
+        },
+        {
+          hid: "og:site_name",
+          name: "og:site_name",
+          content: "Luka Jioshvili",
+        },
+        // {
+        //   hid: "og:url",
+        //   name: "og:url",
+        //   content: "https:///////",
+        // },
+        {
+          hid: "og:type",
+          name: "og:type",
+          content: "website",
+        },
+        {
+          hid: "og:image:alt",
+          name: "og:image:alt",
+          content: "Luka Jioshvili",
+        },
+        {
+          hid: "twitter:card",
+          name: "twitter:card",
+          content: "summary_large_image",
+        },
+        {
+          hid: "twitter:site",
+          name: "twitter:site",
+          content: "@LJioshvili",
+        },
       ],
     }
   },
