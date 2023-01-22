@@ -1,7 +1,7 @@
 <template>
   <main>
     <HomeHeroComponent />
-    <HighLevelStacks />
+    <HighLevelStacks class="mt-20" />
   </main>
 </template>
 
