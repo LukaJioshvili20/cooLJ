@@ -1,6 +1,5 @@
 export function initializeThemePreferance(): boolean {
   const themePreferance = localStorage.getItem("darkTheme");
-  console.log(Boolean(themePreferance));
 
   if (themePreferance) return Boolean(themePreferance);
 
