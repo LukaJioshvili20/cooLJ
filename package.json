@@ -16,6 +16,7 @@
     "lint:fix": "eslint --fix --ext \".ts,.js,.vue\" --ignore-path .gitignore ."
   },
   "devDependencies": {
+    "@nuxt/image-edge": "^1.0.0-27907872.f4dd19d",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/tailwindcss": "^6.2.0",
     "@types/three": "^0.148.0",
@@ -33,6 +34,7 @@
   "dependencies": {
     "@mdi/font": "^7.1.96",
     "@pinia/nuxt": "^0.4.6",
+    "nuxt-swiper": "^0.1.9",
     "pinia": "^2.0.28",
     "three": "^0.148.0"
   }

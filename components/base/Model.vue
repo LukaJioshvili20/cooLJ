@@ -21,7 +21,6 @@
       default: null,
     },
   });
-  console.log(props.modelSize, "updates");
   // setup
   let renderer: WebGLRenderer;
   let controls: OrbitControls;
