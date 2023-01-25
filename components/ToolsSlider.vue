@@ -1,44 +1,22 @@
 <template>
-  <Splide
-    class="splide"
-    :options="{
-      type: 'loop',
-      perPage: 5,
-      arrows: false,
-      interval: 3500,
-      pagination: false,
-      autoplay: true,
+  <Swiper
+    :modules="[SwiperFreeMode, SwiperAutoplay]"
+    slides-per-view="5"
+    :grab-cursor="true"
+    :space-between="30"
+    :speed="4000"
+    :free-mode="true"
+    :loop="true"
+    :autoplay="{
+      delay: 1000,
+      disableOnInteraction: false,
     }"
-    aria-label="Vue Splide Example"
   >
-    <SplideSlide v-for="item in firstSlide" :key="item.name">
-      <img
-        class="h-[40px] w-auto"
-        :src="'/_nuxt/assets/image/icons/' + item.image"
-        :alt="item.name"
-      />
-    </SplideSlide>
-  </Splide>
+    <SwiperSlide v-for="slide in 5" :key="slide">
+      <strong>{{ slide }}</strong>
+    </SwiperSlide>
+  </Swiper>
 </template>
 
 <script lang="ts" setup>
-  import { Splide, SplideSlide } from "@splidejs/vue-splide";
-  import "@splidejs/vue-splide/css";
-  interface TypeSliderItem {
-    name: string;
-    image: string;
-    // link: string;
-  }
-
-  type TypeSlider = TypeSliderItem[];
-  const firstSlide = reactive<TypeSlider>([
-    { name: "javascript", image: "javascript.png" },
-    { name: "vuejs", image: "vue-js.png" },
-    { name: "pinia", image: "pinia.svg" },
-    { name: "nuxtjs", image: "figma.png" },
-    { name: "typescript", image: "typescript.png" },
-    { name: "python", image: "python.png" },
-  ]);
 </script>
-
-<style lang="scss" scoped></style>
