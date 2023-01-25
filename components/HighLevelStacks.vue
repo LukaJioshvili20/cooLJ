@@ -5,7 +5,7 @@
         <h2 class="text-4xl">
           Deliver an optimized <b class="text-red-400">User Experience</b>
         </h2>
-        <p class="3xl mt-4 text-zinc-400">
+        <p class="text-xl mt-4 text-zinc-400">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore
           <b>et dolore magna aliqua. Ut enim ad minim veniam</b>, quis nostrud

@@ -1,7 +1,7 @@
 <template>
   <section>
     <div
-      class="container z-20 mx-auto px-4 flex flex-col-reverse lg:flex-row relative items-center sm:items-start min-h-[475px]"
+      class="container z-20 mx-auto px-4 flex flex-col-reverse lg:flex-row relative items-center sm:items-start my-6 lg:my-0 lg:min-h-[475px]"
     >
       <div class="flex-auto h-full flex flex-col self-center align-middle">
         <h1 class="flex flex-row text-4xl">

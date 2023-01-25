@@ -18,7 +18,7 @@
       <a
         :href="slide.link"
         target="_blank"
-        class="border-spacing-2 bg-backgroundDark-2 bg-opacity-30 border-zinc-700 hover:border-zinc-500 transition-colors border-2 rounded-lg w-[60px] h-[60px] flex z-10"
+        class="border-spacing-2 bg-backgroundDark-2 bg-opacity-30 mx-auto border-zinc-700 hover:border-zinc-500 transition-colors border-2 rounded-lg w-[60px] h-[60px] flex z-10"
       >
         <nuxt-img
           class="self-center mx-auto h-[40px] w-auto z-20"
@@ -76,7 +76,7 @@
       <a
         :href="slide.link"
         target="_blank"
-        class="border-spacing-2 bg-backgroundDark-2 bg-opacity-30 border-zinc-700 hover:border-zinc-500 transition-colors border-2 rounded-lg w-[60px] h-[60px] flex z-10"
+        class="border-spacing-2 bg-backgroundDark-2 bg-opacity-30 mx-auto border-zinc-700 hover:border-zinc-500 transition-colors border-2 rounded-lg w-[60px] h-[60px] flex z-10"
       >
         <nuxt-img
           class="self-center mx-auto p-2 w-auto z-20"
