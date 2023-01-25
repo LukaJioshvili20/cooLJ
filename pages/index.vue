@@ -2,6 +2,13 @@
   <main>
     <HomeHeroComponent />
     <HighLevelStacks class="mt-20" />
+    <section>
+      <div class="container mx-auto">
+        <ClientOnly>
+          <ToolsSlider />
+        </ClientOnly>
+      </div>
+    </section>
   </main>
 </template>
 
