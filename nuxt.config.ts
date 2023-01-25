@@ -12,6 +12,10 @@ export default defineNuxtConfig({
           rel: "stylesheet",
         },
         {
+          href: "https://unpkg.com/swiper/swiper-bundle.min.css",
+          rel: "stylesheet",
+        },
+        {
           href: "/apple-touch-icon.png",
           rel: "apple-touch-icon",
         },
@@ -55,11 +59,8 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt"],
-  plugins: [
-    { src: "~/plugins/three.js", mode: "client" },
-    { src: "~/plugins/splide.js", mode: "client" },
-  ],
+  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "nuxt-swiper"],
+  plugins: [{ src: "~/plugins/three.js", mode: "client" }],
   postcss: {
     plugins: {
       tailwindcss: {},
