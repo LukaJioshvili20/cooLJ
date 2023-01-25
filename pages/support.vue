@@ -1,3 +1,5 @@
 <template>
-  <h1>support</h1>
+  <main>
+    <Support />
+  </main>
 </template>
