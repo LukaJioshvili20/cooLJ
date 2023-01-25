@@ -59,7 +59,12 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "nuxt-swiper"],
+  modules: [
+    "@nuxt/image-edge",
+    "@nuxtjs/tailwindcss",
+    "@pinia/nuxt",
+    "nuxt-swiper",
+  ],
   plugins: [{ src: "~/plugins/three.js", mode: "client" }],
   postcss: {
     plugins: {
