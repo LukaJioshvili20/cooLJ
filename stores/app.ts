@@ -4,11 +4,13 @@ interface AppState {
   isMobile: boolean;
   isNavigationOpened: boolean;
   darkMode: boolean;
+  accordions: { [key: string]: boolean };
 }
 export enum AppActions {
   themeToggleAction = "themeToggleAction",
   toggleNavigationAction = "toggleNavigationAction",
   isMobileAction = "isMobileAction",
+  toggleAccordionAction = "toggleAccordionAction",
 }
 
 export const appStore = defineStore("app", {
@@ -16,6 +18,11 @@ export const appStore = defineStore("app", {
     isMobile: false,
     isNavigationOpened: false,
     darkMode: false,
+    accordions: {
+      option01: true,
+      option02: false,
+      option03: false,
+    },
   }),
   getters: {
     darkModeGetter: (state): boolean => {
@@ -26,6 +33,9 @@ export const appStore = defineStore("app", {
     },
     isMobileGetter: (state): boolean => {
       return state.isMobile;
+    },
+    accordionsGetter: (state): { [key: string]: boolean } => {
+      return state.accordions;
     },
   },
   actions: {
@@ -53,6 +63,9 @@ export const appStore = defineStore("app", {
     },
     [AppActions.isMobileAction](payload: boolean): void {
       this.isMobile = payload;
+    },
+    [AppActions.toggleAccordionAction](payload: string): void {
+      this.accordions[payload] = !this.accordions[payload];
     },
   },
 });
