@@ -64,6 +64,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@pinia/nuxt",
     "nuxt-swiper",
+    "nuxt-icon",
   ],
   plugins: [{ src: "~/plugins/three.js", mode: "client" }],
   postcss: {
