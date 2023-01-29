@@ -11,8 +11,6 @@
   const store = appStore();
   const isDarkTheme = computed(() => store.darkModeGetter);
   function toggleTheme() {
-    console.log("ckicked");
-
     store[AppActions.themeToggleAction]();
   }
 </script>
