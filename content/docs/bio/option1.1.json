@@ -1,0 +1,12 @@
+{
+  "header": {
+    "title":"title",
+    "paragraph":"para"
+  },
+  "body":{
+    "paragraph":"para"
+  },
+  "footer":{
+    "paragraph":"para"
+  }
+}
