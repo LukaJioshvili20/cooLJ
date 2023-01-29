@@ -69,10 +69,10 @@
   const accordions = computed(() => store.accordionsGetter);
 
   function isRouteActive(payload: string | undefined): string {
-    if (typeof payload === "undefined")
-      if (route.path === payload) {
-        return " border-red-400 text-red-400";
-      }
+    if (typeof payload === "undefined") return "";
+    if (route.path === payload) {
+      return " border-red-400 text-red-400";
+    }
     return " border-zinc-400 hover:border-zinc-200 text-zinc-400 hover:text-zinc-200";
   }
   function toggleOption(payload: string): void {

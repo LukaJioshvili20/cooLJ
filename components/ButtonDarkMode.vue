@@ -1,9 +1,9 @@
 <template>
-  <i
+  <Icon
     @click.left="toggleTheme"
-    class="cursor-pointer mdi mdi-24px transition-colors text-zinc-400 hover:text-gray-200"
-    :class="isDarkTheme ? 'mdi-lightbulb-on' : 'mdi-lightbulb'"
-  ></i>
+    :name="isDarkTheme ? 'uil:moon' : 'uil:sun'"
+    class="cursor-pointer text-3xl transition-colors text-zinc-400 hover:text-gray-200"
+  />
 </template>
 
 <script lang="ts" setup>

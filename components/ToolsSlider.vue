@@ -22,7 +22,7 @@
       >
         <nuxt-img
           class="self-center mx-auto h-[40px] w-auto z-20"
-          :src="'images/icons/' + slide.image"
+          :src="slide.image"
           :placeholder="slide.image"
         />
       </a>
@@ -51,7 +51,7 @@
       >
         <nuxt-img
           class="self-center mx-auto h-[40px] w-auto z-20"
-          :src="'images/icons/' + slide.image"
+          :src="slide.image"
           :placeholder="slide.image"
         />
       </a>
@@ -80,7 +80,7 @@
       >
         <nuxt-img
           class="self-center mx-auto p-2 w-auto z-20"
-          :src="'images/icons/' + slide.image"
+          :src="slide.image"
           :placeholder="slide.image"
         />
       </a>
@@ -99,42 +99,94 @@
   const slide01 = reactive<TypeSlider>([
     {
       name: "javascript",
-      image: "javascript.png",
+      image: "images/icons/javascript.png",
       link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     },
-    { name: "vuejs", image: "vue-js.png", link: "https://vuejs.org/" },
-    { name: "pinia", image: "pinia.svg", link: "https://pinia.vuejs.org/" },
-    { name: "nuxtjs", image: "nuxt-js.png", link: "https://nuxt.com/" },
+    {
+      name: "vuejs",
+      image: "images/icons/vue-js.png",
+      link: "https://vuejs.org/",
+    },
+    {
+      name: "pinia",
+      image: "images/icons/pinia.svg",
+      link: "https://pinia.vuejs.org/",
+    },
+    {
+      name: "nuxtjs",
+      image: "images/icons/nuxt-js.png",
+      link: "https://nuxt.com/",
+    },
     {
       name: "typescript",
-      image: "typescript.png",
+      image: "images/icons/typescript.png",
       link: "https://www.typescriptlang.org/",
     },
-    { name: "python", image: "python.png", link: "https://www.python.org/" },
+    {
+      name: "python",
+      image: "images/icons/python.png",
+      link: "https://www.python.org/",
+    },
   ]);
   const slide02 = reactive<TypeSlider>([
-    { name: "figma", image: "figma.png", link: "https://www.figma.com/" },
-    { name: "css3", image: "css3.png", link: "#" },
-    { name: "html5", image: "html5.png", link: "#" },
-    { name: "sass", image: "sass.png", link: "https://sass-lang.com/" },
+    {
+      name: "figma",
+      image: "images/icons/figma.png",
+      link: "https://www.figma.com/",
+    },
+    { name: "css3", image: "images/icons/css3.png", link: "#" },
+    { name: "html5", image: "images/icons/html5.png", link: "#" },
+    {
+      name: "sass",
+      image: "images/icons/sass.png",
+      link: "https://sass-lang.com/",
+    },
     {
       name: "tailwindcss",
-      image: "tailwindcss.png",
+      image: "images/icons/tailwindcss.png",
       link: "https://tailwindcss.com/",
     },
   ]);
   const slide03 = reactive<TypeSlider>([
-    { name: "socketio", image: "socket-io.svg", link: "https://socket.io/" },
-    { name: "swiperjs", image: "swiperjs.svg", link: "https://swiperjs.com/" },
-    { name: "jira", image: "jira.png", link: "https://www.atlassian.com/" },
-    { name: "vueuse", image: "vue-use.svg", link: "https://vueuse.org/" },
-    { name: "axios", image: "axios.png", link: "https://axios-http.com/" },
+    {
+      name: "socketio",
+      image: "images/icons/socket-io.svg",
+      link: "https://socket.io/",
+    },
+    {
+      name: "swiperjs",
+      image: "images/icons/swiperjs.svg",
+      link: "https://swiperjs.com/",
+    },
+    {
+      name: "jira",
+      image: "images/icons/jira.png",
+      link: "https://www.atlassian.com/",
+    },
+    {
+      name: "vueuse",
+      image: "images/icons/vue-use.svg",
+      link: "https://vueuse.org/",
+    },
+    {
+      name: "axios",
+      image: "images/icons/axios.png",
+      link: "https://axios-http.com/",
+    },
     {
       name: "firebase",
-      image: "firebase.png",
+      image: "images/icons/firebase.png",
       link: "https://firebase.google.com/",
     },
-    { name: "git", image: "git.png", link: "https://git-scm.com/" },
-    { name: "github", image: "github.png", link: "https://github.com/" },
+    {
+      name: "git",
+      image: "images/icons/git.png",
+      link: "https://git-scm.com/",
+    },
+    {
+      name: "github",
+      image: "images/icons/github.png",
+      link: "https://github.com/",
+    },
   ]);
 </script>
