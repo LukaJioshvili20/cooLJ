@@ -19,9 +19,8 @@ export const appStore = defineStore("app", {
     isNavigationOpened: false,
     darkMode: false,
     accordions: {
-      option01: true,
-      option02: false,
-      option03: false,
+      bio: true,
+      another: false,
     },
   }),
   getters: {
