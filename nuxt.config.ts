@@ -61,6 +61,7 @@ export default defineNuxtConfig({
   },
   modules: [
     "@nuxt/image-edge",
+    "@nuxt/content",
     "@nuxtjs/tailwindcss",
     "@pinia/nuxt",
     "nuxt-swiper",
