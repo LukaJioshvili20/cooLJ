@@ -32,16 +32,16 @@
         <li>
           <button
             class="z-60 overflow-hidden hover:text-zinc-200 text-zinc-400 transition-colors"
-            @click.left="toggleOption('tools')"
+            @click.left="toggleOption('technology')"
           >
-            <span class="text-white">Tools</span>
+            <span class="text-white">technology</span>
             <Icon
               name="uil:angle-double-up"
               class="transition-transform text-2xl transform-gpu"
               :class="accordions.another ? '-rotate-180' : 'rotate-0'"
             />
           </button>
-          <ul class="z-50 overflow-hidden" v-if="accordions.tools">
+          <ul class="z-50 overflow-hidden" v-if="accordions.technology">
             <li
               :class="isRouteActive(route._path)"
               class="border-l transition-colors"
@@ -83,5 +83,5 @@
   });
   // TODO : NEEEDS TO BE CONVERTED TO REACTIVE DATA
   const contentBio = data.value?.filter((item) => item._dir === "biography");
-  const contentAnother = data.value?.filter((item) => item._dir === "tools");
+  const contentAnother = data.value?.filter((item) => item._dir === "technology");
 </script>
