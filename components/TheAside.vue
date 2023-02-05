@@ -34,7 +34,7 @@
             class="z-60 overflow-hidden hover:text-zinc-200 text-zinc-400 transition-colors"
             @click.left="toggleOption('technology')"
           >
-            <span class="text-white">technology</span>
+            <span class="text-white">Technology</span>
             <Icon
               name="uil:angle-double-up"
               class="transition-transform text-2xl transform-gpu"
@@ -83,5 +83,7 @@
   });
   // TODO : NEEEDS TO BE CONVERTED TO REACTIVE DATA
   const contentBio = data.value?.filter((item) => item._dir === "biography");
-  const contentAnother = data.value?.filter((item) => item._dir === "technology");
+  const contentAnother = data.value?.filter(
+    (item) => item._dir === "technology"
+  );
 </script>
