@@ -20,7 +20,7 @@ export const appStore = defineStore("app", {
     darkMode: false,
     accordions: {
       biography: true,
-      tools: false,
+      tools: true,
     },
   }),
   getters: {
