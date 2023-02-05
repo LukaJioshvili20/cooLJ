@@ -18,7 +18,7 @@
             <li
               class="my-auto mx-2 text-sm transition-colors text-zinc-400 hover:text-gray-200"
             >
-              <NuxtLink to="/docs/biography/biography"> Docs </NuxtLink>
+              <NuxtLink to="/about/biography/biography"> About </NuxtLink>
             </li>
             <li
               class="my-auto mx-2 text-sm transition-colors text-zinc-400 hover:text-gray-200"
