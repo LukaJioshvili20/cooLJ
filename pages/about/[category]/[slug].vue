@@ -5,17 +5,17 @@
       <div class="flex-auto p-4">
         <ContentDoc>
           <template v-slot="{ doc }">
-            <div v-if="doc.header" class="pb-2">
+            <div v-if="doc.header" class="mb-2">
               <h2 class="text-2xl font-semibold text-red-400">
                 {{ doc.header.title }}
               </h2>
               <p class="text-lg">{{ doc.header.paragraph }}</p>
             </div>
-            <div v-if="doc.body">
+            <div v-if="doc.body" class="mb-2">
               <h2>{{ doc.body.title }}</h2>
-              <div v-html="doc.body.description"></div>
+              <div class="description" v-html="doc.body.description"></div>
             </div>
-            <div v-if="doc.roadmap" class="pb-2">
+            <div v-if="doc.roadmap" class="mb-2">
               <h2 class="text-2xl text-red-400 font-semibold pb-2">
                 Roadmap of my journey
               </h2>
@@ -50,7 +50,9 @@
 </template>
 
 <style lang="scss" scoped>
-  ul {
-    list-style: disc;
+  .description {
+    ul {
+      list-style: disc;
+    }
   }
 </style>
