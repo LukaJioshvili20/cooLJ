@@ -1,0 +1,8 @@
+{
+    "body":{
+      "description":"<ul><li class='mb-2'><h4 class='text-red-400 text-2xl font-semibold'>Javascript</h4><p class='text-lg'>Currently, Javascript is the core language of Luka's web development, which he uses in Nuxt.js, Vue.js, and Electron.js to create reactive and responsive applications for himself or work.</p></li><li class='mb-2'><h4 class='text-red-400 text-2xl font-semibold'>Typescript</h4><p class='text-lg'>Typescript greatly increases development experience for Luka, which on top of Nuxt.js 3 and Vue.js 3 creates a better environment and time saving work flow.</p></li><li class='mb-2'><h4 class='text-red-400 text-2xl font-semibold'>Python</h4><p class='text-lg'>Luka uses Python for learning and understanding algorithms or programming paradigms, as its easy syntax enables him to focus more on algorithms instead of fixing syntax and environment errors or warnings. By the way, he enjoys playing around in Python environment</p></li><li class='mb-2'><h4 class='text-red-400 text-2xl font-semibold'>C++</h4><p class='text-lg'>The language is his greatest enemy for Luka, as dull and not so well-educated lecturers made him dislike that high-level programming language.</p></li></ul>"
+    },
+    "footer":{
+      "paragraph":"pa11ra"
+    }
+  }
