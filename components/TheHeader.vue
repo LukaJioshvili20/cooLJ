@@ -135,7 +135,7 @@
                 <Icon
                   name="uil:angle-double-up"
                   class="transition-transform text-2xl transform-gpu"
-                  :class="accordions.bio ? '-rotate-180' : 'rotate-0'"
+                  :class="about ? '-rotate-180' : 'rotate-0'"
                 />
               </button>
               <ul
@@ -151,7 +151,7 @@
                     <Icon
                       name="uil:angle-double-up"
                       class="transition-transform text-2xl transform-gpu"
-                      :class="accordions.bio ? '-rotate-180' : 'rotate-0'"
+                      :class="accordions.biography ? '-rotate-180' : 'rotate-0'"
                     />
                   </button>
                   <ul class="z-50 overflow-hidden" v-if="accordions.biography">
@@ -178,7 +178,7 @@
                     <Icon
                       name="uil:angle-double-up"
                       class="transition-transform text-2xl transform-gpu"
-                      :class="accordions.another ? '-rotate-180' : 'rotate-0'"
+                      :class="accordions.tools ? '-rotate-180' : 'rotate-0'"
                     />
                   </button>
                   <ul class="z-50 overflow-hidden" v-if="accordions.tools">
@@ -216,24 +216,22 @@
 </template>
 
 <script lang="ts" setup>
-  // TODO: use teleport for mobile nav
   import { AppActions, appStore } from "@/stores/app";
+  const routeState = useRoute();
   const store = appStore();
+  const about = ref(false);
+  const route = useRoute();
+  const accordions = computed(() => store.accordionsGetter);
+
+  // Navigation
   const navigationOpened = computed(() => store.isNavigationOpenedGetter);
   function toggleMobileNavigation(payload?: boolean) {
     store[AppActions.toggleNavigationAction](payload);
   }
-  const routeState = useRoute();
-
+  // Active link
   watch(routeState, () => {
     toggleMobileNavigation(false);
   });
-
-  const about = ref(false);
-  const route = useRoute();
-
-  const accordions = computed(() => store.accordionsGetter);
-
   function isRouteActive(payload: string | undefined): string {
     if (typeof payload === "undefined") return "";
     if (route.path === payload) {
