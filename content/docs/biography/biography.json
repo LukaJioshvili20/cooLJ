@@ -1,0 +1,40 @@
+{
+  "header": {
+    "title":"title",
+    "paragraph":"para"
+  },
+  "body": {
+    "title":"title",
+    "description":"<p>this is paragraph</p>"
+  },
+  "roadmap":[
+    {
+      "date": "20 Feb, 2002",
+      "title": "Born in Borjomi, Georgia."
+    },
+    {
+      "date": "2020",
+      "title": "Graduated Public School in Borjomi."
+    },
+    {
+      "date": "2020 - Present",
+      "title":
+        "Started Learning at the School of Information Technology at the Caucasus University."
+    },
+    {
+      "date": "2020",
+      "title": "Worked as intership at Saatec Software Company in Tbilisi!"
+    },
+    {
+      "date": "2021 - Present",
+      "title": "Works as a freelance."
+    },
+    {
+      "date": "2022 - Present",
+      "title": "Work in LavaPi"
+    }
+  ],
+  "footer":{
+    "paragraph":"para"
+  }
+}
