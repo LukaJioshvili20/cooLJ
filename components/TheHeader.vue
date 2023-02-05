@@ -206,6 +206,10 @@
             </li>
           </ul>
         </div>
+        <div
+          class="bg-transparent z-100 flex-auto h-full w-full"
+          @click.left="toggleMobileNavigation(false)"
+        ></div>
       </div>
     </transition>
   </header>
