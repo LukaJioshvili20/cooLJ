@@ -1,8 +1,8 @@
 <template>
   <main>
-    <div class="container mx-auto flex flex-row">
-      <TheAside />
-      <div class="flex-auto">
+    <div class="container mx-auto flex flex-col lg:flex-row">
+      <TheAside class="hidden lg:flex" />
+      <div class="flex-auto p-4">
         <ContentDoc>
           <template v-slot="{ doc }">
             <div v-if="doc.header" class="pb-2">

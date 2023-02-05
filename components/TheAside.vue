@@ -1,5 +1,5 @@
 <template>
-  <aside class="w-auto z-50 min-w-[200px] pr-2">
+  <aside class="z-50 w-full lg:min-w-[200px] lg:w-auto p-4 lg:p-0 lg:pr-2">
     <nav>
       <ul>
         <li>
