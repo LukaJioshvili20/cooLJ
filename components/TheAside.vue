@@ -1,20 +1,20 @@
 <template>
-  <aside class="w-auto z-50">
+  <aside class="w-auto z-50 min-w-[200px] pr-2">
     <nav>
       <ul>
         <li>
           <button
             class="z-60 overflow-hidden hover:text-zinc-200 text-zinc-400 transition-colors"
-            @click.left="toggleOption('bio')"
+            @click.left="toggleOption('biography')"
           >
-            <span class="text-white">Bio</span>
+            <span class="text-white">Biography</span>
             <Icon
               name="uil:angle-double-up"
               class="transition-transform text-2xl transform-gpu"
               :class="accordions.bio ? '-rotate-180' : 'rotate-0'"
             />
           </button>
-          <ul class="z-50 overflow-hidden" v-if="accordions.bio">
+          <ul class="z-50 overflow-hidden" v-if="accordions.biography">
             <li
               :class="isRouteActive(route._path)"
               class="border-l transition-colors"
@@ -32,16 +32,16 @@
         <li>
           <button
             class="z-60 overflow-hidden hover:text-zinc-200 text-zinc-400 transition-colors"
-            @click.left="toggleOption('another')"
+            @click.left="toggleOption('tools')"
           >
-            <span class="text-white">another</span>
+            <span class="text-white">Tools</span>
             <Icon
               name="uil:angle-double-up"
               class="transition-transform text-2xl transform-gpu"
               :class="accordions.another ? '-rotate-180' : 'rotate-0'"
             />
           </button>
-          <ul class="z-50 overflow-hidden" v-if="accordions.another">
+          <ul class="z-50 overflow-hidden" v-if="accordions.tools">
             <li
               :class="isRouteActive(route._path)"
               class="border-l transition-colors"
@@ -82,6 +82,6 @@
     return queryContent("/").find();
   });
   // TODO : NEEEDS TO BE CONVERTED TO REACTIVE DATA
-  const contentBio = data.value?.filter((item) => item._dir === "bio");
-  const contentAnother = data.value?.filter((item) => item._dir === "another");
+  const contentBio = data.value?.filter((item) => item._dir === "biography");
+  const contentAnother = data.value?.filter((item) => item._dir === "tools");
 </script>

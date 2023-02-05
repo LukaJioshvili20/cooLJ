@@ -1,0 +1,44 @@
+{
+  "header": {
+    "title":"Briefly about myself",
+    "paragraph":"Luka is a front-end developer and freelance from Georgia with a great passion for becoming great developer. He wants to become full-stack developer , but before he started learning front-end. While he is offline , he loves playing video games and drawing sketches. His goal is not simple as just becoming developer , he wants to do more than that..."
+  },
+  "roadmap":[
+    {
+      "date": "20 Feb, 2002",
+      "title": "Born in Borjomi, Georgia. 🐱‍🏍"
+    },
+    {
+      "date": "15 Sept, 2008",
+      "title": "Enrolled in public school in Borjomi, Georgia. 😁"
+    },
+    {
+      "date": "15 July, 2020",
+      "title": "Graduated Public School in Borjomi, Georgia. 🎉"
+    },
+    {
+      "date": "1 Sept, 2020 - Present",
+      "title":
+        "Enrolled in the School of Information Technology at the Caucasus University. ( Rookie mistake 🤣 )"
+    },
+    {
+      "date": "2020 ( 3 months )",
+      "title": "Worked as an internship at Saatec Software Company in Tbilisi! 😃"
+    },
+    {
+      "date": "10 Aug, 2021 - Present",
+      "title": "Works as a freelance. 🐱‍🐉"
+    },
+    {
+      "date": "18 May, 2022 - 24 Jul, 2022",
+      "title": "Worked as an internship for Front-end developer on Remote at LavaPi! 😎"
+    },
+    {
+      "date": "24 Jul, 2022 - Present",
+      "title": "Started working on Full-time as Front-end developer in LavaPi. 🐱‍👤"
+    }
+  ],
+  "footer":{
+    "paragraph":"para"
+  }
+}
