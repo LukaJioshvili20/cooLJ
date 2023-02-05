@@ -91,14 +91,14 @@
           id="mobileNavigationBar"
           class="bg-black h-full min-w-[320px] max-w-3/4 max-w-xs px-4 pb-12 shadow sm:px-6"
         >
-          <div class="h-8 w-full my-2 flex flex-row justify-between">
+          <div class="h-8 w-full my-2 flex flex-row justify-between mb-">
             <Icon
               @click.left="toggleMobileNavigation()"
               name="uil:exit"
               class="cursor-pointer transition-colors text-3xl text-zinc-400 hover:text-gray-200"
             />
             <ul class="h-full flex flex-row items-center">
-              <li>
+              <li class="mr-2">
                 <a
                   href="https://www.linkedin.com/in/luka-jioshvili/"
                   target="_blank"
@@ -109,7 +109,7 @@
                   />
                 </a>
               </li>
-              <li>
+              <li class="mr-2">
                 <a href="https://github.com/LukaJioshvili20" target="_blank">
                   <Icon
                     name="uil:github"
@@ -123,16 +123,85 @@
             </ul>
           </div>
           <ul>
-            <li>
+            <li class="mb-1">
               <NuxtLink to="/">Homepage</NuxtLink>
             </li>
-            <li>
-              <NuxtLink to="/docs/option1.1">Docs</NuxtLink>
+            <li class="mb-1">
+              <button
+                class="z-60 overflow-hidden hover:text-zinc-200 text-zinc-400 transition-colors"
+                @click.left="about = !about"
+              >
+                <span class="text-white">About</span>
+                <Icon
+                  name="uil:angle-double-up"
+                  class="transition-transform text-2xl transform-gpu"
+                  :class="accordions.bio ? '-rotate-180' : 'rotate-0'"
+                />
+              </button>
+              <ul
+                v-if="about"
+                class="pl-2 border-l transition-colors border-zinc-400 hover:border-zinc-200 text-zinc-400 hover:text-zinc-200"
+              >
+                <li>
+                  <button
+                    class="z-60 overflow-hidden hover:text-zinc-200 text-zinc-400 transition-colors"
+                    @click.left="toggleOption('biography')"
+                  >
+                    <span class="text-white">Biography</span>
+                    <Icon
+                      name="uil:angle-double-up"
+                      class="transition-transform text-2xl transform-gpu"
+                      :class="accordions.bio ? '-rotate-180' : 'rotate-0'"
+                    />
+                  </button>
+                  <ul class="z-50 overflow-hidden" v-if="accordions.biography">
+                    <li
+                      :class="isRouteActive(route._path)"
+                      class="border-l transition-colors"
+                      v-for="route in contentBio"
+                    >
+                      <NuxtLink
+                        :to="route._path"
+                        class="flex items-center justify-between py-1.5 text-sm pl-4 font-medium"
+                      >
+                        {{ route.title }}
+                      </NuxtLink>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <button
+                    class="z-60 overflow-hidden hover:text-zinc-200 text-zinc-400 transition-colors"
+                    @click.left="toggleOption('tools')"
+                  >
+                    <span class="text-white">Tools</span>
+                    <Icon
+                      name="uil:angle-double-up"
+                      class="transition-transform text-2xl transform-gpu"
+                      :class="accordions.another ? '-rotate-180' : 'rotate-0'"
+                    />
+                  </button>
+                  <ul class="z-50 overflow-hidden" v-if="accordions.tools">
+                    <li
+                      :class="isRouteActive(route._path)"
+                      class="border-l transition-colors"
+                      v-for="route in contentAnother"
+                    >
+                      <NuxtLink
+                        :to="route._path"
+                        class="flex items-center justify-between py-1.5 text-sm pl-4 font-medium"
+                      >
+                        {{ route.title }}
+                      </NuxtLink>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
-            <li>
+            <li class="mb-1">
               <NuxtLink to="/roadmap">Roadmap</NuxtLink>
             </li>
-            <li>
+            <li class="mb-1">
               <NuxtLink to="/support">Support</NuxtLink>
             </li>
           </ul>
@@ -155,6 +224,28 @@
   watch(routeState, () => {
     toggleMobileNavigation(false);
   });
+
+  const about = ref(false);
+  const route = useRoute();
+
+  const accordions = computed(() => store.accordionsGetter);
+
+  function isRouteActive(payload: string | undefined): string {
+    if (typeof payload === "undefined") return "";
+    if (route.path === payload) {
+      return " border-red-400 text-red-400";
+    }
+    return " border-zinc-400 hover:border-zinc-200 text-zinc-400 hover:text-zinc-200";
+  }
+  function toggleOption(payload: string): void {
+    store[AppActions.toggleAccordionAction](payload);
+  }
+  const { data } = await useAsyncData("homepage", async () => {
+    return queryContent("/").find();
+  });
+  // TODO : NEEEDS TO BE CONVERTED TO REACTIVE DATA
+  const contentBio = data.value?.filter((item) => item._dir === "biography");
+  const contentAnother = data.value?.filter((item) => item._dir === "tools");
 </script>
 
 <style lang="scss" scoped>
