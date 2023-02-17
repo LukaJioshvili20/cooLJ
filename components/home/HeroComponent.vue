@@ -15,7 +15,7 @@
           <BaseButton
             class="mr-2 font-medium"
             :title="'Get Started'"
-            :link="'/docs'"
+            :link="'/about/biography/biography'"
           />
           <a
             class="transition-colors text-zinc-400 hover:text-zinc-200 font-medium"
