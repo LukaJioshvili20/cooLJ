@@ -64,6 +64,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/tailwindcss",
     "@pinia/nuxt",
+    "@nuxtjs/supabase",
     "nuxt-swiper",
     "nuxt-icon",
   ],
