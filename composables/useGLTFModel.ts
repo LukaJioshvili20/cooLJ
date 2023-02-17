@@ -1,5 +1,5 @@
 // add gltf model
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { GLTFLoader } from "assets/scripts/GLTFLoader";
 
 export function useGLTFModel(){
     const gltfLoader = new GLTFLoader();
