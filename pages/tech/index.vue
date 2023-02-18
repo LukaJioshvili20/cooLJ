@@ -47,8 +47,20 @@
 
 <script lang="ts" setup>
   const client = useSupabaseClient();
-  const { data: techList } = await useAsyncData("techData", async () => {
-    const { data } = await client.from("tech").select();
-    return data;
+  interface TechItem {
+    id: number;
+    title: string;
+    sub_title: string;
+    description: string;
+    image_name: string;
+    slug: string;
+  }
+
+  const { data: techList } = useAsyncData(async () => {
+    const { data } = await client
+      .from("tech")
+      .select("id,slug,title,sub_title,image_name");
+
+    return data as TechItem[] | null;
   });
 </script>
