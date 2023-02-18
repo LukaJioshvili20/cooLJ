@@ -20,7 +20,11 @@
             >
               <NuxtLink to="/about/biography/biography"> About </NuxtLink>
             </li>
-
+            <li
+              class="my-auto mx-2 text-sm transition-colors text-zinc-400 hover:text-gray-200"
+            >
+              <NuxtLink to="/tech">Tech</NuxtLink>
+            </li>
             <li
               class="my-auto mx-2 text-sm transition-colors text-zinc-400 hover:text-gray-200"
             >
@@ -192,6 +196,9 @@
                   </ul>
                 </li>
               </ul>
+            </li>
+            <li class="mb-1">
+              <NuxtLink to="/tech">Tech</NuxtLink>
             </li>
             <li class="mb-1">
               <NuxtLink to="/support">Support</NuxtLink>
