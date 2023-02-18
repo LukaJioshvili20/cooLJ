@@ -80,4 +80,7 @@ export default defineNuxtConfig({
   },
   css: ["@/assets/css/main.scss", "@mdi/font/css/materialdesignicons.min.css"],
   pages: true,
+  runtimeConfig: {
+    SUPABASE_URL: process.env.SUPABASE_URL || "",
+  },
 });
