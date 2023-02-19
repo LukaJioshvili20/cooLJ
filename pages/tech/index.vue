@@ -2,31 +2,30 @@
   <main>
     <BaseHero :media-url="'/videos/tech-hero'" :is-video="true" />
     <section>
-      <div class="container mx-auto">
+      <div class="container mx-auto px-4 lg:px-0">
         <div class="mb-4">
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
-            consequatur consectetur veritatis deserunt nesciunt hic sint
-            cupiditate ullam odio sapiente cum commodi repellendus, ipsam
-            excepturi quae aperiam laboriosam unde maxime. Lorem ipsum dolor sit
-            amet consectetur, adipisicing elit. Recusandae maiores quod odio
-            blanditiis praesentium neque. Tempore architecto perferendis, soluta
-            nemo, sapiente obcaecati consectetur pr earum laboriosam rerum
-            dolorum.
+            As a developer and student, I've been spending hours and hours at my
+            desk every day. So, I recently have started improving my workspace
+            in order to boost my productivity and study quality. So, here is a
+            living snapshot and a place to point curious people to when I get
+            asked.
             <NuxtLink to="/" class="text-red-400">
               Learn more about me
               <Icon name="uil:arrow-right" />
             </NuxtLink>
           </p>
         </div>
-        <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <ul
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-4"
+        >
           <li class="text-center mb-4" v-for="item in techList" :key="item.id">
             <NuxtLink class="group" :to="`/tech/${item.slug}`">
               <NuxtImg
                 :src="`https://mrblyyuwhpbgbcjtgupx.supabase.co/storage/v1/object/public/tech/${item.id}/${item.image_name}`"
                 loading="lazy"
                 decoding="async"
-                class="item__image rounded-lg object-cover object-center lg:w-[300px] lg:h-[200px] border-2 border-zinc-700 group-hover:border-zinc-500 duration-[400ms]"
+                class="item__image rounded-lg object-cover object-center w-full sm:h-[160px] lg:w-[300px] lg:h-[200px] border-2 border-zinc-700 group-hover:border-zinc-500 duration-[400ms]"
                 :placeholder="item.image_name"
               />
               <div class="pt-2 pb-4">
