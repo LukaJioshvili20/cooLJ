@@ -93,7 +93,7 @@
           <div class="h-8 w-full my-2 flex flex-row justify-between mb-">
             <Icon
               @click.left="toggleMobileNavigation()"
-              name="uil:exit"
+              name="uil:left-indent-alt"
               class="cursor-pointer transition-colors text-3xl text-zinc-400 hover:text-gray-200"
             />
             <ul class="h-full flex flex-row items-center">
