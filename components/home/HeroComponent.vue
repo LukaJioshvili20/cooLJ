@@ -5,7 +5,13 @@
     >
       <div class="flex-auto h-full flex flex-col self-center align-middle">
         <h1 class="flex flex-row text-4xl">
-          <img src="/J-32.svg" width="20" height="20" alt="J" class="mr-2" />
+          <NuxtImg
+            src="/J-32.svg"
+            width="20"
+            height="20"
+            alt="J"
+            class="mr-2"
+          />
           Luka
         </h1>
         <p class="text-xl mt-2">

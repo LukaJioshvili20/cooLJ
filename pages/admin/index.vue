@@ -4,7 +4,7 @@
       <figure
         class="inline-flex h-20 w-20 items-center justify-center rounded-full bg-gray-800 text-gray-600"
       >
-        <img
+        <NuxtImg
           class="rounded-full"
           src="https://xsgames.co/randomusers/avatar.php?g=pixel"
           alt=""

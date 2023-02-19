@@ -7,7 +7,13 @@
       <div class="flex flex-col justify-center">
         <NuxtLink to="/">
           <span class="flex flex-row items-center">
-            <img src="/J-32.svg" width="20" height="20" alt="J" class="mr-2" />
+            <NuxtImg
+              src="/J-32.svg"
+              width="20"
+              height="20"
+              alt="J"
+              class="mr-2"
+            />
             <p class="font-semibold text-white">Luka Jioshvili</p>
           </span>
         </NuxtLink>
@@ -61,7 +67,13 @@
       />
       <NuxtLink to="/">
         <span class="flex flex-row items-center">
-          <img src="/J-32.svg" width="20" height="20" alt="J" class="mr-2" />
+          <NuxtImg
+            src="/J-32.svg"
+            width="20"
+            height="20"
+            alt="J"
+            class="mr-2"
+          />
           <p class="font-semibold text-white">Luka Jioshvili</p>
         </span>
       </NuxtLink>

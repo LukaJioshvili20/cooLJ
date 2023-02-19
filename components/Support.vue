@@ -16,7 +16,7 @@
         </div>
         <div class="my-4 lg:my-0 flex flex-col justify-center align-middle">
           <a href="https://www.buymeacoffee.com/lukajioshvili" target="_blank">
-            <img
+            <NuxtImg
               src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=lukajioshvili&button_colour=FFDD00&font_colour=000000&font_family=Inter&outline_colour=000000&coffee_colour=ffffff"
             />
           </a>
