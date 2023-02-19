@@ -81,41 +81,55 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
+  interface Tech {
+    id?: number;
+    title: string;
+    sub_title: string;
+    description: string;
+    slug: string;
+    image_name: string;
+  }
+
   const client = useSupabaseClient();
   const title = ref("");
   const sub_title = ref("");
   const description = ref("");
   const slug = ref("");
   const imageFile = ref();
-  // interface TechItem {
-  //   title: string;
-  //   sub_title: string;
-  //   description: string;
-  //   slug: string;
-  //   image_name: string;
-  // }
-  function onFileSelected(event) {
-    const file = event?.target?.files?.[0] ?? null;
-    if (typeof file === "object") {
-      imageFile.value = file;
+
+  interface UpsertResponse {
+    data: Tech | null;
+    error: any;
+  }
+  function onFileSelected(event: Event) {
+    const fileInput = event.target as HTMLInputElement;
+    let fileList: FileList | null = fileInput.files;
+    if (!fileList) return;
+
+    if (typeof fileList[0] === "object") {
+      imageFile.value = fileList[0];
       console.info("SUCESS -- File uploaded: ", imageFile.value);
     }
   }
-  // function isFile(value: unknown): value is File {
-  //   return value instanceof File;
-  // }
-  async function uploadTech() {
-    // Upload the file to storage
-    if (title.value && imageFile.value) {
+
+  async function upsertTech(
+    client: any,
+    title: any,
+    sub_title: any,
+    description: any,
+    slug: any,
+    imageFile: any
+  ): Promise<UpsertResponse> {
+    try {
       const { data: insertData, error: insertError } = await client
         .from("tech")
         .upsert({
-          title: title.value,
-          sub_title: sub_title.value,
-          description: description.value,
-          slug: slug.value,
-          image_name: imageFile.value.name,
+          title: title,
+          sub_title: sub_title,
+          description: description,
+          slug: slug,
+          image_name: imageFile,
         })
         .select()
         .single();
@@ -127,10 +141,29 @@
         console.info("SUCCESS -- Data inserted:", insertData);
       }
 
-      if (imageFile.value) {
+      return insertData;
+    } catch (error) {
+      throw error;
+    }
+  }
+  async function uploadTech() {
+    if (title.value && imageFile.value) {
+      const upsertData = await upsertTech(
+        client,
+        title.value,
+        sub_title.value,
+        description.value,
+        slug.value,
+        imageFile.value.name
+      );
+
+      if (imageFile.value && upsertData.data?.id) {
         const { data, error } = await client.storage
           .from("tech")
-          .upload(`${insertData.id}/${imageFile.value.name}`, imageFile.value);
+          .upload(
+            `${upsertData.data?.id}/${imageFile.value.name}`,
+            imageFile.value
+          );
         if (error) {
           // TODO: add deleteing inserted row if image is not uploaded
           console.error("ERROR -- Could not upload file:", error);
