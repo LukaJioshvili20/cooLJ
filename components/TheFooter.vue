@@ -2,15 +2,25 @@
   <footer class="border-t-[1px] bg-black border-white/20 text-white">
     <div class="container mx-auto flex flex-row justify-between h-full px-4">
       <div class="flex items-center">
-        <p class="text-sm">
-          Made with
-          <a href="https://nuxt.com/" target="_blank">
-            <i class="mdi mdi-nuxt text-green-600"></i>
-          </a>
-          <a href="https://tailwindcss.com/" target="_blank">
-            <i class="mdi mdi-tailwind text-blue-500"></i>
-          </a>
-        </p>
+        <ul class="flex flex-row">
+          <li>
+            <DownloadResume
+              class="mr-2"
+              :file-name="'LukaJioshvili.pdf'"
+              :file-path="'resume'"
+              :title="'Resume'"
+            />
+          </li>
+          <li>
+            <a
+              class="underline underline-offset-2 h-full flex flex-col justify-center"
+              href="https://github.com/LukaJioshvili20/cooLJ"
+              target="_blank"
+            >
+              Source
+            </a>
+          </li>
+        </ul>
       </div>
       <div class="flex items-center">
         <ul class="flex flex-row">
