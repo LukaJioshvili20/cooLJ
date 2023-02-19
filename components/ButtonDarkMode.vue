@@ -2,7 +2,7 @@
   <Icon
     @click.left="toggleTheme"
     :name="isDarkTheme ? 'uil:moon' : 'uil:sun'"
-    class="cursor-pointer text-3xl transition-colors text-zinc-400 hover:text-gray-200"
+    class="cursor-pointer text-xl transition-colors text-zinc-400 hover:text-gray-200"
   />
 </template>
 

@@ -42,7 +42,7 @@
             >
               <Icon
                 name="uil:linkedin"
-                class="cursor-pointer mr-2 transition-colors text-3xl text-zinc-400 hover:text-gray-200"
+                class="cursor-pointer mr-2 transition-colors text-xl text-zinc-400 hover:text-gray-200"
               />
             </a>
           </li>
@@ -50,7 +50,7 @@
             <a href="https://github.com/LukaJioshvili20" target="_blank">
               <Icon
                 name="uil:github"
-                class="cursor-pointer mr-2 transition-colors text-3xl text-zinc-400 hover:text-gray-200"
+                class="cursor-pointer mr-2 transition-colors text-xl text-zinc-400 hover:text-gray-200"
               />
             </a>
           </li>
@@ -67,7 +67,7 @@
       <Icon
         @click.left="toggleMobileNavigation()"
         name="uil:bars"
-        class="cursor-pointer text-3xl transition-colors text-zinc-400 hover:text-gray-200"
+        class="cursor-pointer text-xl transition-colors text-zinc-400 hover:text-gray-200"
       />
       <NuxtLink to="/">
         <span class="flex flex-row items-center">
