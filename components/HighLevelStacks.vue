@@ -18,7 +18,7 @@
             <div
               class="border-spacing-2 bg-backgroundDark-2 bg-opacity-30 border-zinc-700 hover:border-zinc-500 transition-colors border-2 rounded-lg p-6"
             >
-              <div class="">
+              <div>
                 <img
                   src="@/assets/image/hero-gradient.svg"
                   :alt="`Image of ${item.title}`"

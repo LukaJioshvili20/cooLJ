@@ -9,7 +9,7 @@
       />
       <video
         v-if="isVideo"
-        class="absolute inset-0 min-w-full min-h-full -top-3/4 opacity-30"
+        class="absolute inset-0 min-w-full min-h-full lg:-top-3/4 opacity-30"
         :autoplay="true"
         :muted="true"
         :loop="true"

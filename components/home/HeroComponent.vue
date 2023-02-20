@@ -1,16 +1,12 @@
 <template>
   <section>
     <div
-      class="container z-20 mx-auto px-4 flex flex-col-reverse lg:flex-row relative items-center sm:items-start my-6 lg:my-0 lg:min-h-[475px]"
+      class="container z-20 mx-auto px-4 flex flex-col-reverse lg:flex-row relative items-center sm:items-start sm:my-6 lg:my-0 lg:min-h-[475px]"
     >
       <div class="flex-auto h-full flex flex-col self-center align-middle">
-        <h1 class="flex flex-row text-4xl">
-          <img src="/J-32.svg" width="20" height="20" alt="J" class="mr-2" />
-          Luka
+        <h1 class="text-xl mt-2">
+          Greetings, 👋 I'm a web app developer based in Georgia!
         </h1>
-        <p class="text-xl mt-2">
-          Build and Deploy Universal JavaScript Servers
-        </p>
         <div class="mt-10">
           <BaseButton
             class="mr-2 font-medium"
@@ -25,7 +21,9 @@
           >
         </div>
       </div>
-      <div class="hidden sm:block absolute right-0 flex-none">
+      <div
+        class="flex flex-row justify-center h-[475px] w-full lg:w-fit lg:block relative lg:absolute sm:right-0 flex-none"
+      >
         <ClientOnly>
           <BaseModel
             :model-path="'/models/nuxty/nuxty.gltf'"
@@ -43,3 +41,5 @@
     />
   </section>
 </template>
+
+<script></script>
