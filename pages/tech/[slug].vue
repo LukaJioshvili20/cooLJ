@@ -41,4 +41,44 @@
   if (fileData.value) {
     imageURL.value = fileData.value.publicUrl;
   }
+  useHead({
+    title: `${tech.value?.title} - Tech I Use`,
+    meta: [
+      {
+        hid: "title",
+        name: "title",
+        content: tech.value?.title.trim() + " - Tech I Use",
+      },
+      {
+        hid: "og:title",
+        name: "og:title",
+        content: tech.value?.title.trim() + " - Tech I Use",
+      },
+      {
+        hid: "author",
+        name: "author",
+        content: "Luka Jioshvili",
+      },
+      {
+        hid: "keywords",
+        name: "keywords",
+        content: tech.value?.title.trim() + "Tech, Devices, Gadgets",
+      },
+      {
+        hid: "description",
+        name: "description",
+        content: "Description of " + tech.value?.title.trim(),
+      },
+      {
+        hid: "og:description",
+        name: "og:description",
+        content: "Description of " + tech.value?.title.trim(),
+      },
+      {
+        hid: "og:image",
+        name: tech.value?.title.trim(),
+        content: imageURL,
+      },
+    ],
+  });
 </script>
