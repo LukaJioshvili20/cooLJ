@@ -1,10 +1,10 @@
 <template>
   <section class="relative mb-6 h-80 only:flex justify-center items-center">
     <div class="absolute w-full h-80 overflow-hidden">
-      <NuxtImg
+      <img
         v-if="isImage"
-        class="absolute inset-0 min-w-full min-h-full object-cover opacity-30"
-        :src="require(props.mediaUrl + '.webp')"
+        class="absolute inset-0 min-w-full min-h-full object-cover opacity-100"
+        :src="props.mediaUrl"
         placeholder="Hero"
       />
       <video
