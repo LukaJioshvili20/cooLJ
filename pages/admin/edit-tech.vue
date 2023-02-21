@@ -43,11 +43,16 @@
   </main>
 </template>
 
-<script setup>
+<script lang="ts" setup>
+  import { techStore } from "@/stores/tech";
+  import { TechItemType } from "~~/stores/types";
+  const store = techStore();
   const user = useSupabaseUser();
   const addTech = ref(true);
   const updateTech = ref(false);
   const deleteTech = ref(false);
+  const list = computed((): TechItemType[] => Object.values(store.dataGetter));
+  console.log(list);
 
   function addTechA() {
     addTech.value = true;
