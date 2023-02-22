@@ -4,6 +4,7 @@ interface AppState {
   isMobile: boolean;
   isNavigationOpened: boolean;
   darkMode: boolean;
+  editTechItemId: object | null;
   accordions: { [key: string]: boolean };
 }
 export enum AppActions {
@@ -11,6 +12,7 @@ export enum AppActions {
   toggleNavigationAction = "toggleNavigationAction",
   isMobileAction = "isMobileAction",
   toggleAccordionAction = "toggleAccordionAction",
+  editTechItemIdAction = "editTechItemIdAction",
 }
 
 export const appStore = defineStore("app", {
@@ -18,6 +20,7 @@ export const appStore = defineStore("app", {
     isMobile: false,
     isNavigationOpened: false,
     darkMode: false,
+    editTechItemId: null,
     accordions: {
       biography: true,
       technology: true,
@@ -35,6 +38,9 @@ export const appStore = defineStore("app", {
     },
     accordionsGetter: (state): { [key: string]: boolean } => {
       return state.accordions;
+    },
+    editTechItemIdGetter: (state): object | null => {
+      return state.editTechItemId;
     },
   },
   actions: {
@@ -65,6 +71,9 @@ export const appStore = defineStore("app", {
     },
     [AppActions.toggleAccordionAction](payload: string): void {
       this.accordions[payload] = !this.accordions[payload];
+    },
+    [AppActions.editTechItemIdAction](payload: object): void {
+      this.editTechItemId = payload;
     },
   },
 });
