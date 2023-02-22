@@ -1,6 +1,7 @@
 import { defineStore } from "pinia";
+import { TechItemType, TestObject } from "./types";
 interface TechState {
-  data: object;
+  data: TestObject;
 }
 export enum TechActions {
   setDataAction = "setDataAction",
@@ -12,14 +13,15 @@ export const techStore = defineStore("tech", {
   }),
   getters: {
     dataGetter: (state): object => {
-      console.log(state.data);
       return state.data;
     },
   },
   actions: {
-    [TechActions.setDataAction](payload: object): void {
-      this.data = payload;
-      console.log(payload, this.data);
+    [TechActions.setDataAction](payload: TechItemType[] | null): void {
+      if (payload === null) return;
+      for (let i in payload) {
+        this.data[payload[i].id] = payload[i];
+      }
     },
   },
 });

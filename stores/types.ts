@@ -7,3 +7,7 @@ export interface TechItemType {
   image_name: string;
   slug: string;
 }
+
+export interface TestObject {
+  [key: string | number]: TechItemType;
+}

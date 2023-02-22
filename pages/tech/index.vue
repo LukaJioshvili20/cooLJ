@@ -35,12 +35,7 @@
                 <div
                   class="sub-group absolute z-10 p-2 bg-black top-2 right-2 rounded-full bg-opacity-50 hover:bg-opacity-100 transition-all text-white hover:text-red-400"
                 >
-                  <Icon
-                    @click.left.prevent="redirectToEdit(item.id)"
-                    class="z-20 text-2xl"
-                    v-if="user"
-                    name="uil:edit"
-                  />
+                  <Icon class="z-20 text-2xl" v-if="user" name="uil:edit" />
                 </div>
               </div>
               <div class="pt-2 pb-4">
@@ -63,31 +58,13 @@
 </template>
 
 <script lang="ts" setup>
-  import { TechActions, techStore } from "@/stores/tech";
+  import { techStore } from "@/stores/tech";
+
   import { TechItemType } from "~~/stores/types";
   const store = techStore();
   const user = useSupabaseUser();
-  const client = useSupabaseClient();
-  const router = useRouter();
   const list = computed((): TechItemType[] => Object.values(store.dataGetter));
-  const { data: techList } = useAsyncData(async () => {
-    const { data } = await client
-      .from("tech")
-      .select("id,created_at,title, sub_title,description,image_name,slug");
 
-    return data as TechItemType[] | null;
-  });
-  console.log(techList);
-
-  if (techList.value) {
-    store[TechActions.setDataAction](techList.value);
-  }
-  function redirectToEdit(tech_id: number): void {
-    router.push({
-      path: "/admin/edit-tech",
-      query: { tech_id: tech_id },
-    });
-  }
   useHead({
     title: "What I use - Luka Jioshvili",
     meta: [
