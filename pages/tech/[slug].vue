@@ -40,6 +40,11 @@
   });
   if (fileData.value) {
     imageURL.value = fileData.value.publicUrl;
+  } else {
+    throw createError({
+      statusCode: 404,
+      statusMessage: "Tech page not found.",
+    });
   }
   useHead({
     title: `${tech.value?.title} - Tech I Use`,
