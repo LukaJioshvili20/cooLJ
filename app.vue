@@ -6,26 +6,40 @@
 
 <script lang="ts" setup>
   import { AppActions, appStore } from "@/stores/app";
-
-  const store = appStore();
+  import { TechActions, techStore } from "@/stores/tech";
+  import { TechItemType } from "~~/stores/types";
+  const client = useSupabaseClient();
+  const techPinia = techStore();
+  const appPinia = appStore();
   const windowWidth = ref(0);
 
   function currentWindowWidth() {
     windowWidth.value = window.innerWidth;
   }
+  const { data: techList } = useAsyncData(async () => {
+    const { data } = await client
+      .from("tech")
+      .select("id,created_at,title, sub_title,description,image_name,slug");
+
+    return data as TechItemType[] | null;
+  });
+
+  if (techList) {
+    techPinia[TechActions.setDataAction](techList.value);
+  }
 
   watch(windowWidth, () => {
     if (windowWidth.value <= 840) {
-      store[AppActions.isMobileAction](true);
+      appPinia[AppActions.isMobileAction](true);
       return;
     }
-    store[AppActions.isMobileAction](false);
+    appPinia[AppActions.isMobileAction](false);
   });
 
   onBeforeMount(() => {
     currentWindowWidth();
     window.addEventListener("resize", currentWindowWidth);
 
-    store[AppActions.themeToggleAction](initializeThemePreferance());
+    appPinia[AppActions.themeToggleAction](initializeThemePreferance());
   });
 </script>
