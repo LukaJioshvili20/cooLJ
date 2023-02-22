@@ -3,9 +3,6 @@
     <HomeHeroComponent />
     <HighLevelStacks class="mt-20" />
     <section>
-      <div class="container mx-auto mb-4">
-        <h3 class="text-4xl font-semibold">Tools I use</h3>
-      </div>
       <div class="container mx-auto">
         <ClientOnly>
           <ToolsSlider />
